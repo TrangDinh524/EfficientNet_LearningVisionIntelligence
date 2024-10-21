@@ -18,7 +18,7 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 
 NUM_EPOCHS = 90
 NUM_WORKERS = 4
-BATCH_SIZE = 32
+BATCH_SIZE = 128
 NUM_CLASSES = 100
 IMG_SIZE = 224
 MODEL_CKPT_PATH = None
@@ -30,7 +30,7 @@ TRAIN_VAL_SPLIT = 0.0
 TRAIN_VAL_SPLIT_SEED = 542
 
 # Optimizer
-LR = 1.25e-2 * 8 * int(BATCH_SIZE / 32)  # 8 devices
+LR = 1.25e-2 * int(BATCH_SIZE / 32)
 WEIGHT_DECAY = 1e-4
 MOMENTUM = 0.9
 NESTEROV = True
@@ -39,10 +39,10 @@ NESTEROV = True
 LR_SCHEDULER_MILESTONES = [30, 60, 80]
 LR_SCHEDULER_GAMMA = 0.1
 
-BEST_CKPT_SAVE_PATH = ""
-LOSS_PLOT_SAVE_PATH = ""
-ACCURACY_PLOT_SAVE_PATH = ""
-LR_PLOT_SAVE_PATH = ""
+BEST_CKPT_SAVE_PATH = "/home/cipher/Trang/run/best.pth"
+LOSS_PLOT_SAVE_PATH = "/home/cipher/Trang/run/loss.png"
+ACCURACY_PLOT_SAVE_PATH = "/home/cipher/Trang/run/accuracy.png"
+LR_PLOT_SAVE_PATH = "/home/cipher/Trang/run/lr.png"
 
 
 superclass_mapping = {

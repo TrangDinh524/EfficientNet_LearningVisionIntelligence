@@ -36,7 +36,7 @@ To train the model, follow these steps:
 All hyperparameters are located at the top of the script for easy modification.
 
 3. Train the model:
-  python EfficientNet.py
+  torchrun --standalone --nnodes=1 --nproc-per-node=1 EfficientNet.py
 
 ## Requirements
 After training, the model is evaluated on the test set of CIFAR-100. The following metrics are computed:
@@ -46,7 +46,7 @@ After training, the model is evaluated on the test set of CIFAR-100. The followi
     Superclass Accuracy
 
 Run the evaluation by loading the best checkpoint, which is automatically saved to:
-..............
+BEST_CKPT_SAVE_PATH
 
 ## Random Seed
 The code uses a fixed random seed for dataset splitting and transformations to ensure reproducibility:
@@ -56,4 +56,4 @@ To change the random seed, modify the TRAIN_VAL_SPLIT_SEED variable in the scrip
 
 ## Model Checkpoints
 The best model is saved automatically during training to:
-.....
+BEST_CKPT_SAVE_PATH

@@ -35,13 +35,14 @@ To train the model, follow these steps:
 
 All hyperparameters are located at the top of the script for easy modification.
 
-3. You will need to modify these paths to locations that are accessible on your machine:
+3. You will need to modify these paths to locations that are accessible on your machine:  
     BEST_CKPT_SAVE_PATH = "/your/custom/path/best.pth"  
     LOSS_PLOT_SAVE_PATH = "/your/custom/path/loss.png"  
     ACCURACY_PLOT_SAVE_PATH = "/your/custom/path/accuracy.png"  
     LR_PLOT_SAVE_PATH = "/your/custom/path/lr.png"  
    
 Replace the default paths with your own desired file paths
+
 4. Train the model:
   torchrun --standalone --nnodes=1 --nproc-per-node=1 EfficientNet.py
 

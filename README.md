@@ -33,7 +33,7 @@ To train the model, follow these steps:
     Momentum: 0.9  
     Test Time Augmentation (TTA): Enabled by default  
 
-All hyperparameters are located at the top of the script for easy modification.
+  All hyperparameters are located at the top of the script for easy modification.
 
 3. You will need to modify these paths to locations that are accessible on your machine:  
     BEST_CKPT_SAVE_PATH = "/your/custom/path/best.pth"  
@@ -41,7 +41,7 @@ All hyperparameters are located at the top of the script for easy modification.
     ACCURACY_PLOT_SAVE_PATH = "/your/custom/path/accuracy.png"  
     LR_PLOT_SAVE_PATH = "/your/custom/path/lr.png"  
    
-Replace the default paths with your own desired file paths
+  Replace the default paths with your own desired file paths
 
 4. Train the model:
   torchrun --standalone --nnodes=1 --nproc-per-node=1 EfficientNet.py

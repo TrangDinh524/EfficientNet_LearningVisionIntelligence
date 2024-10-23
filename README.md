@@ -28,7 +28,7 @@ To train the model, follow these steps:
 
     Number of Epochs: 90
     Batch Size: 32
-    Learning Rate: Automatically scaled based on the batch size, starting at 0.1 for 8 devices.
+    Learning Rate: Automatically scaled based on the batch size, starting at 0.1.
     Weight Decay: 1e-4
     Momentum: 0.9
     Test Time Augmentation (TTA): Enabled by default
